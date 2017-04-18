@@ -5,4 +5,7 @@
 ## Development
 * Use yarn.
 
-## Links
+## Links and stuff
+* Firebase
+* Ionic starter apps
+* Ionic View, http://view.ionic.io
