@@ -1,2 +1,2 @@
 # minsim
-MinSim, a mining simulation games. No graphics, pure simulation.
+MinSim, a mining simulation game. No graphics, pure simulation.
