@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "minsim",
+  "author": "Stefan Härtel",
+  "homepage": "https://github.com/EightBitBoy/minsim",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -48,5 +48,5 @@
       "locator": "ios"
     }
   ],
-  "description": "minsim: An Ionic project"
+  "description": "MinSim: A mining simulation game."
 }
