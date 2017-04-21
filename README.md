@@ -14,6 +14,10 @@ MinSim, a mining simulation game. No graphics, pure simulation.
 
 ## Build an .apk
 * `ionic build android --debug`
-* Adjust `config.xml`.
+* Adjust `minsim/config.xml`.
 * Run `ionic platform remove ios` and `ionic platform add ios` to fix a build error.
-* `ionic build android --debug`
+* `ionic build android --release`
+* Change the directory to `minsim/platforms/android/build/outputs/apk`.
+* `zipalign -v -p 4 android-release-unsigned.apk android-release-unsigned-aligned.apk`
+* `apksigner sign --ks /path/to/keystore.jks --out android-release.apk android-release-unsigned-aligned.apk`
+* `apksigner verify android-release.apk`
