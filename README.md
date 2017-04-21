@@ -9,3 +9,5 @@ MinSim, a mining simulation game. No graphics, pure simulation.
 * `ionic start minsim --v2`.
 * `ionic serve`.
 * `ionic platform add android`.
+* `cordova platform update android@6.2.1`
+* `ionic run android --device`
