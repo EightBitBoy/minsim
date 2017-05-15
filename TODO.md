@@ -3,6 +3,7 @@
 ## Features
 
 ## Development
+* Logging
 
 ### Database
 * http://kpgalligan.tumblr.com/post/133281929963/my-talk-at-droidcon-uk
