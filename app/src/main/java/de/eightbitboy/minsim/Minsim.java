@@ -1,4 +1,12 @@
 package de.eightbitboy.minsim;
 
-public class Minsim {
+import android.app.Application;
+
+public class Minsim extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+
+    }
 }
