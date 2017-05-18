@@ -6,6 +6,7 @@
 
 ### UI
 * Design-Support-Library
+* https://github.com/codepath/android_guides/wiki/Design-Support-Library
 
 ### Database
 * http://kpgalligan.tumblr.com/post/133281929963/my-talk-at-droidcon-uk
@@ -20,6 +21,7 @@
 
 ### Other
 * Logging
+* https://github.com/codepath/android_guides/wiki
 
 ## Links and stuff
 * https://developers.google.com/android-publisher/#publishing
