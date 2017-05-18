@@ -5,6 +5,7 @@ jdk:
 
 android:
   components:
+    - tools
     - build-tools-25.0.3
     - android-25
   licenses:
@@ -13,6 +14,7 @@ android:
     - 'google-gdk-license-.+'
 
 before_install:
+  - ls -la /usr/local/android-sdk/licenses
   - chmod +x gradlew
 
 script:
