@@ -5,4 +5,8 @@ android:
     - build-tools-25.0.3
     - android-25
 
-script: ./gradlew test
+before_install:
+  - chmod +x gradlew
+
+script:
+  - ./gradlew test
