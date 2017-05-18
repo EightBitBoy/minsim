@@ -3,7 +3,9 @@
 ## Features
 
 ## Development
-* Logging
+
+### UI
+* Design-Support-Library
 
 ### Database
 * http://kpgalligan.tumblr.com/post/133281929963/my-talk-at-droidcon-uk
@@ -15,6 +17,9 @@
 ### Testing
 * Spock
 * Espresso
+
+### Other
+* Logging
 
 ## Links and stuff
 * https://developers.google.com/android-publisher/#publishing
