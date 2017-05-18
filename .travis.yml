@@ -14,7 +14,6 @@ android:
     - 'google-gdk-license-.+'
 
 before_install:
-  - ls -la /usr/local/android-sdk/licenses
   - chmod +x gradlew
 
 script:
