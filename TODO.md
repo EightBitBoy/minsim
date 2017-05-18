@@ -9,6 +9,8 @@
 * http://kpgalligan.tumblr.com/post/133281929963/my-talk-at-droidcon-uk
 * GreenDAO
 * DBFlow
+* Use a DataProvider?
+* http://www.vogella.com/tutorials/AndroidSQLite/article.html
 
 ### Testing
 * Spock

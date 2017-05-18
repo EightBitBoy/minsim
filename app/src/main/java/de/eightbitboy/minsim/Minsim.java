@@ -22,6 +22,7 @@ public class Minsim extends Application {
 
     private void initDatabase() {
         Realm.init(getApplicationContext());
+        Realm realm = Realm.getDefaultInstance();
         Timber.d("### Database has been initialized!");
     }
 }
