@@ -20,6 +20,9 @@
 * Espresso
 
 ### Other
+* https://github.com/codepath/android_guides/wiki/Must-Have-libraries
+* https://blog.codecentric.de/2017/01/must-libraries-fuer-android/
+* IcePick
 * Logging
 * https://github.com/codepath/android_guides/wiki
 
