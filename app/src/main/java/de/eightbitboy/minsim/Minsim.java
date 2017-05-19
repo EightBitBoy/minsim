@@ -2,6 +2,7 @@ package de.eightbitboy.minsim;
 
 import android.app.Application;
 
+import de.eightbitboy.minsim.database.Database;
 import timber.log.Timber;
 
 public class Minsim extends Application {
@@ -20,6 +21,7 @@ public class Minsim extends Application {
     }
 
     private void initDatabase() {
+        Database.initialize(this);
         Timber.d("### Database has been initialized!");
     }
 }
