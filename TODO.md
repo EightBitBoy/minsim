@@ -5,8 +5,15 @@
 ## Development
 
 ### UI
+* viewPager for Fragment?
+* android.support.design
+* https://guides.codepath.com/android/Bottom-Navigation-Views
+* http://www.vogella.com/tutorials/AndroidListView/article.html
+* https://github.com/roughike/BottomBar
 * Design-Support-Library
 * https://github.com/codepath/android_guides/wiki/Design-Support-Library
+* https://material.io/guidelines/components/bottom-navigation.html
+* https://material.io/guidelines/patterns/navigation-drawer.html
 
 ### Database
 * http://kpgalligan.tumblr.com/post/133281929963/my-talk-at-droidcon-uk
@@ -20,6 +27,7 @@
 * Espresso
 
 ### Other
+* EventBus
 * https://github.com/codepath/android_guides/wiki/Must-Have-libraries
 * https://blog.codecentric.de/2017/01/must-libraries-fuer-android/
 * IcePick
