@@ -30,4 +30,6 @@ final public class Database {
         }
         return SESSION;
     }
+
+    //TODO Close DB when closing the app?
 }
