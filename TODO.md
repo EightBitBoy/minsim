@@ -25,6 +25,7 @@
 * IcePick
 * Logging
 * https://github.com/codepath/android_guides/wiki
+* https://medium.freecodecamp.com/25-new-android-libraries-which-you-definitely-want-to-try-at-the-beginning-of-2017-45878d5408c0
 
 ## Links and stuff
 * https://developers.google.com/android-publisher/#publishing
