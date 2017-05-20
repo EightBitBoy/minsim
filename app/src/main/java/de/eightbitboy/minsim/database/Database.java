@@ -17,6 +17,10 @@ final public class Database {
         SESSION = master.newSession();
     }
 
+    //TODO handle migrations
+    //https://dzone.com/articles/how-to-set-up-database-migrations-with-greendao
+    //search: sqlite database migration
+
     public static void initialize(Context context) {
         if (SESSION != null) {
             return;
