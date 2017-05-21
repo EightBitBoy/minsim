@@ -46,6 +46,8 @@ dependencies {
     compile 'com.jakewharton.timber:timber:4.5.1'
     compile 'org.greenrobot:greendao:3.2.2'
     compile 'com.jakewharton:butterknife:8.6.0'
+    compile 'org.flywaydb:flyway-core:4.2.0'
+    compile 'org.sqldroid:sqldroid:1.0.3'
 
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 
