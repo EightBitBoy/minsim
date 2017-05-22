@@ -18,6 +18,7 @@ final public class Database {
     }
 
     //TODO handle migrations
+    //http://stackoverflow.com/questions/13373170/greendao-schema-update-and-data-migration
     //https://dzone.com/articles/how-to-set-up-database-migrations-with-greendao
     //https://piercezaifman.com/how-to-setup-database-migrations-with-greendao/
     //search: sqlite database migration
