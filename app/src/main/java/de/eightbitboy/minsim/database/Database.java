@@ -19,6 +19,7 @@ final public class Database {
 
     //TODO handle migrations
     //https://dzone.com/articles/how-to-set-up-database-migrations-with-greendao
+    //https://piercezaifman.com/how-to-setup-database-migrations-with-greendao/
     //search: sqlite database migration
 
     public static void initialize(Context context) {

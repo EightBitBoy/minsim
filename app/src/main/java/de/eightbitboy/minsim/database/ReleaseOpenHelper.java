@@ -18,17 +18,7 @@ public class ReleaseOpenHelper extends DaoMaster.OpenHelper {
     }
 
     @Override
-    public void onOpen(SQLiteDatabase db) {
-        super.onOpen(db);
-    }
-
-    @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         super.onUpgrade(db, oldVersion, newVersion);
-    }
-
-    @Override
-    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        super.onDowngrade(db, oldVersion, newVersion);
     }
 }
