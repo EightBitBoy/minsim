@@ -5,6 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 
 import de.eightbitboy.minsim.data.DaoMaster;
 import de.eightbitboy.minsim.data.DaoSession;
+import de.eightbitboy.minsim.data.Level;
+import de.eightbitboy.minsim.data.LevelDao;
 
 final public class Database {
 
@@ -35,6 +37,17 @@ final public class Database {
             throw new IllegalStateException("The database is not initialized!");
         }
         return SESSION;
+    }
+
+    public static void seed(SQLiteDatabase db){
+        DaoMaster seedMaster = new DaoMaster(db);
+        DaoSession seedSession = seedMaster.newSession();
+
+        LevelDao levelDao = seedSession.getLevelDao();
+
+        Level level1 = new Level();
+        level1.setNumber(1);
+        levelDao.insert(level1);
     }
 
     //TODO Close DB when closing the app?
