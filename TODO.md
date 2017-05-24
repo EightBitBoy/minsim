@@ -24,6 +24,7 @@
 * http://www.vogella.com/tutorials/AndroidSQLite/article.html
 
 ### Testing
+* Trvis CI emulator
 * Spock
 * Espresso
 
