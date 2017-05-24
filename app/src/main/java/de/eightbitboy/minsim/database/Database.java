@@ -3,6 +3,7 @@ package de.eightbitboy.minsim.database;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import de.eightbitboy.minsim.BuildConfig;
 import de.eightbitboy.minsim.data.DaoMaster;
 import de.eightbitboy.minsim.data.DaoSession;
 import de.eightbitboy.minsim.data.Level;
@@ -10,10 +11,20 @@ import de.eightbitboy.minsim.data.LevelDao;
 
 final public class Database {
 
+    public static  String DATABASE_NAME = "minsim-db";
+
     private static DaoSession SESSION;
 
     private Database(Context context) {
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(context, "minsim-db", null);
+        //DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(context, "minsim-db", null);
+
+        DaoMaster.OpenHelper helper;
+        if(BuildConfig.DEBUG){
+            helper = new DebugOpenHelper(context, DATABASE_NAME);
+        }else{
+            helper = new ReleaseOpenHelper(context, DATABASE_NAME);
+        }
+
         SQLiteDatabase db = helper.getWritableDatabase();
         DaoMaster master = new DaoMaster(db);
         SESSION = master.newSession();
