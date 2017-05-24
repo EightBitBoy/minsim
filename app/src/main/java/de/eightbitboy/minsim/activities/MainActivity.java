@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity
         implements LevelFragment.OnListFragmentInteractionListener,
         InventoryFragment.OnListFragmentInteractionListener{
 
-    @BindView(R.id.message) TextView mTextMessage;
     @BindView(R.id.navigation) BottomNavigationView navigation;
 
     @Override
@@ -47,11 +46,9 @@ public class MainActivity extends AppCompatActivity
 
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        mTextMessage.setText(R.string.title_levels);
                         fragment = levelFragment;
                         break;
                     case R.id.navigation_dashboard:
-                        mTextMessage.setText(R.string.title_inventory);
                         fragment = inventoryFragment;
                         break;
                 }

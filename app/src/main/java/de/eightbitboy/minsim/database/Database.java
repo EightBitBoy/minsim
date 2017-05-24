@@ -8,6 +8,7 @@ import de.eightbitboy.minsim.data.DaoMaster;
 import de.eightbitboy.minsim.data.DaoSession;
 import de.eightbitboy.minsim.data.Level;
 import de.eightbitboy.minsim.data.LevelDao;
+import timber.log.Timber;
 
 final public class Database {
 
@@ -21,8 +22,10 @@ final public class Database {
         DaoMaster.OpenHelper helper;
         if(BuildConfig.DEBUG){
             helper = new DebugOpenHelper(context, DATABASE_NAME);
+            Timber.w("Using a DEBUG database!");
         }else{
             helper = new ReleaseOpenHelper(context, DATABASE_NAME);
+            Timber.w("Using a RELEASE database!");
         }
 
         SQLiteDatabase db = helper.getWritableDatabase();
