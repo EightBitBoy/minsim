@@ -14,14 +14,7 @@ import de.eightbitboy.minsim.R;
 import de.eightbitboy.minsim.fragments.level.dummy.DummyContent;
 import de.eightbitboy.minsim.fragments.level.dummy.DummyContent.DummyItem;
 
-import java.util.List;
 
-/**
- * A fragment representing a list of Items.
- * <p/>
- * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
- * interface.
- */
 public class LevelFragment extends Fragment {
 
     // TODO: Customize parameter argument names
