@@ -34,6 +34,7 @@
 * Espresso
 
 ### Other
+* Remember to do important stuff in fragments in onAttach and on Detach!
 * EventBus
 * http://androidannotations.org/
 * https://github.com/codepath/android_guides/wiki/Must-Have-libraries
