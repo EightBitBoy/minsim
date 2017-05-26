@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import de.eightbitboy.minsim.R;
 import de.eightbitboy.minsim.data.Level;
 import de.eightbitboy.minsim.data.LevelDao;
@@ -32,9 +33,7 @@ class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.ViewHolder>
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.level = levels.get(position);
-        holder.numberTextView.setText("FOO");
-        holder.contentTextView.setText("Level " + holder.level.getNumber());
+		holder.setLevel(levels.get(position));
 
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,14 +50,21 @@ class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.ViewHolder>
 
     class ViewHolder extends RecyclerView.ViewHolder {
         public final View view;
-        Level level;
+        private Level level;
 
 	    @BindView(R.id.level_item_number) TextView numberTextView;
 	    @BindView(R.id.level_item_content) TextView contentTextView;
 
         ViewHolder(View view) {
             super(view);
+	        ButterKnife.bind(this, view);
             this.view = view;
         }
+
+	    public void setLevel(Level level) {
+		    this.level = level;
+		    numberTextView.setText("" + this.level.getNumber());
+		    contentTextView.setText("Level " + this.level.getNumber());
+	    }
     }
 }
