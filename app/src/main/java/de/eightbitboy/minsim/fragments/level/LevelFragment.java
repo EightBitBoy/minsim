@@ -16,7 +16,7 @@ import de.eightbitboy.minsim.fragments.level.dummy.DummyContent.DummyItem;
 
 public class LevelFragment extends Fragment {
 
-    private OnListFragmentInteractionListener mListener;
+    private OnListFragmentInteractionListener listener;
 
     public LevelFragment() {
     }
@@ -34,7 +34,7 @@ public class LevelFragment extends Fragment {
 	    Context context = view.getContext();
 
 	    recyclerView.setLayoutManager(new LinearLayoutManager(context));
-	    recyclerView.setAdapter(new LevelItemAdapter(DummyContent.ITEMS, mListener));
+	    recyclerView.setAdapter(new LevelItemAdapter(DummyContent.ITEMS, listener));
 
         return view;
     }
@@ -44,7 +44,7 @@ public class LevelFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof OnListFragmentInteractionListener) {
-            mListener = (OnListFragmentInteractionListener) context;
+            listener = (OnListFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnListFragmentInteractionListener");
@@ -54,19 +54,11 @@ public class LevelFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        mListener = null;
+        listener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
+    // TODO
+    // http://developer.android.com/training/basics/fragments/communicating.html
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
         void onListFragmentInteraction(DummyItem item);
