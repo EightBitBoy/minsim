@@ -20,8 +20,7 @@ import de.eightbitboy.minsim.fragments.level.dummy.DummyContent;
 
 //TODO read about the interfaces
 //http://stackoverflow.com/questions/24777985/how-to-implement-onfragmentinteractionlistener
-public class MainActivity extends AppCompatActivity
-        implements InventoryFragment.OnListFragmentInteractionListener{
+public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.navigation) BottomNavigationView navigation;
 
@@ -58,10 +57,5 @@ public class MainActivity extends AppCompatActivity
                 return true;
             }
         });
-    }
-
-    @Override
-    public void onListFragmentInteraction(de.eightbitboy.minsim.fragments.inventory.dummy.DummyContent.DummyItem item) {
-
     }
 }
