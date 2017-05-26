@@ -7,24 +7,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import de.eightbitboy.minsim.R;
-import de.eightbitboy.minsim.fragments.level.LevelFragment.OnListFragmentInteractionListener;
 import de.eightbitboy.minsim.fragments.level.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
- * specified {@link OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
- */
 public class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.ViewHolder> {
 
     private final List<DummyItem> mValues;
-    private final OnListFragmentInteractionListener mListener;
 
-    public LevelItemAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public LevelItemAdapter(List<DummyItem> items) {
         mValues = items;
-        mListener = listener;
     }
 
     @Override
@@ -43,11 +35,7 @@ public class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.View
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (null != mListener) {
-                    // Notify the active callbacks interface (the activity, if the
-                    // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
-                }
+				//TODO Do something on click?
             }
         });
     }

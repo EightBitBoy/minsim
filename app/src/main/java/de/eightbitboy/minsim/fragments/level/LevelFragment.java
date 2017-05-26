@@ -16,8 +16,6 @@ import de.eightbitboy.minsim.fragments.level.dummy.DummyContent.DummyItem;
 
 public class LevelFragment extends Fragment {
 
-    private OnListFragmentInteractionListener listener;
-
     public LevelFragment() {
     }
 
@@ -34,33 +32,10 @@ public class LevelFragment extends Fragment {
 	    Context context = view.getContext();
 
 	    recyclerView.setLayoutManager(new LinearLayoutManager(context));
-	    recyclerView.setAdapter(new LevelItemAdapter(DummyContent.ITEMS, listener));
+	    recyclerView.setAdapter(new LevelItemAdapter(DummyContent.ITEMS));
 
         return view;
     }
-
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnListFragmentInteractionListener) {
-            listener = (OnListFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnListFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        listener = null;
-    }
-
     // TODO
     // http://developer.android.com/training/basics/fragments/communicating.html
-    public interface OnListFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
-    }
 }
