@@ -9,14 +9,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.eightbitboy.minsim.R;
 import de.eightbitboy.minsim.fragments.inventory.InventoryFragment;
 import de.eightbitboy.minsim.fragments.level.LevelFragment;
-import de.eightbitboy.minsim.fragments.level.dummy.DummyContent;
 
 //TODO read about the interfaces
 //http://stackoverflow.com/questions/24777985/how-to-implement-onfragmentinteractionlistener

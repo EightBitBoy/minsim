@@ -10,8 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import de.eightbitboy.minsim.R;
-import de.eightbitboy.minsim.fragments.level.dummy.DummyContent;
-import de.eightbitboy.minsim.fragments.level.dummy.DummyContent.DummyItem;
 
 
 public class LevelFragment extends Fragment {
@@ -32,7 +30,7 @@ public class LevelFragment extends Fragment {
 	    Context context = view.getContext();
 
 	    recyclerView.setLayoutManager(new LinearLayoutManager(context));
-	    recyclerView.setAdapter(new LevelItemAdapter(DummyContent.ITEMS));
+	    recyclerView.setAdapter(new LevelItemAdapter());
 
         return view;
     }

@@ -7,16 +7,19 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import de.eightbitboy.minsim.R;
-import de.eightbitboy.minsim.fragments.level.dummy.DummyContent.DummyItem;
+import de.eightbitboy.minsim.data.Level;
+import de.eightbitboy.minsim.data.LevelDao;
+import de.eightbitboy.minsim.database.Database;
 
 import java.util.List;
 
-public class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.ViewHolder> {
+class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<Level> levels;
 
-    public LevelItemAdapter(List<DummyItem> items) {
-        mValues = items;
+    LevelItemAdapter() {
+	    LevelDao dao = Database.getSession().getLevelDao();
+	    levels = dao.loadAll();
     }
 
     @Override
@@ -28,11 +31,11 @@ public class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.View
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        holder.level = levels.get(position);
+        holder.mIdView.setText("" + levels.get(position).getNumber());
+        holder.mContentView.setText("Level " + holder.level.getNumber());
 
-        holder.mView.setOnClickListener(new View.OnClickListener() {
+        holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 				//TODO Do something on click?
@@ -42,25 +45,20 @@ public class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.View
 
     @Override
     public int getItemCount() {
-        return mValues.size();
+        return levels.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public final View mView;
-        public final TextView mIdView;
-        public final TextView mContentView;
-        public DummyItem mItem;
+    class ViewHolder extends RecyclerView.ViewHolder {
+        public final View view;
+        final TextView mIdView;
+        final TextView mContentView;
+        Level level;
 
-        public ViewHolder(View view) {
+        ViewHolder(View view) {
             super(view);
-            mView = view;
+            this.view = view;
             mIdView = (TextView) view.findViewById(R.id.id);
             mContentView = (TextView) view.findViewById(R.id.content);
-        }
-
-        @Override
-        public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
         }
     }
 }
