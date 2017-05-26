@@ -15,7 +15,7 @@ import de.eightbitboy.minsim.database.Database;
 
 import java.util.List;
 
-class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.ViewHolder> {
+class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.LevelItemViewHolder> {
 
     private final List<Level> levels;
 
@@ -25,14 +25,14 @@ class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.ViewHolder>
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public LevelItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.fragment_level_item, parent, false);
-        return new ViewHolder(view);
+        return new LevelItemViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
+    public void onBindViewHolder(final LevelItemViewHolder holder, int position) {
 		holder.setLevel(levels.get(position));
 
         holder.view.setOnClickListener(new View.OnClickListener() {
@@ -48,14 +48,14 @@ class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.ViewHolder>
         return levels.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class LevelItemViewHolder extends RecyclerView.ViewHolder {
         public final View view;
         private Level level;
 
 	    @BindView(R.id.level_item_number) TextView numberTextView;
 	    @BindView(R.id.level_item_content) TextView contentTextView;
 
-        ViewHolder(View view) {
+	    LevelItemViewHolder(View view) {
             super(view);
 	        ButterKnife.bind(this, view);
             this.view = view;
