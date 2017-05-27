@@ -24,12 +24,13 @@
 * http://www.vogella.com/tutorials/AndroidSQLite/article.html
 
 ### Testing
-* Trvis CI emulator
+* Travis CI emulator
 * Spock
 * Espresso
 
 ### Other
 * EventBus
+* http://androidannotations.org/
 * https://github.com/codepath/android_guides/wiki/Must-Have-libraries
 * https://blog.codecentric.de/2017/01/must-libraries-fuer-android/
 * IcePick
