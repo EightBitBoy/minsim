@@ -1,31 +1,27 @@
-package de.eightbitboy.minsim.robo.database;
+package de.eightbitboy.minsim.database;
 
-import org.junit.Before;
+import android.content.Context;
+import android.support.test.InstrumentationRegistry;
+import android.support.test.runner.AndroidJUnit4;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.Robolectric;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
 
-import de.eightbitboy.minsim.BuildConfig;
 import de.eightbitboy.minsim.activities.MainActivity;
-import de.eightbitboy.minsim.database.Database;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
-import io.realm.internal.RealmCore;
 
 import static org.junit.Assert.*;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class)
+@RunWith(AndroidJUnit4.class)
 public class DatabaseTest {
 
     //TODO Read about dynamic realms!
     //TODO Read about setting up the activity for the whole class!
     @Test
     public void initializeTest() {
-        MainActivity activity = Robolectric.setupActivity(MainActivity.class);
-        Database.initialize(activity.getApplicationContext());
+        Context context = InstrumentationRegistry.getTargetContext();
+        Database.initialize(context);
         assertNotNull(Database.getDb());
     }
 
@@ -45,10 +41,10 @@ public class DatabaseTest {
     }
 
     private Realm getDb(long schemaVersion) {
-        MainActivity activity = Robolectric.setupActivity(MainActivity.class);
-        Realm.init(activity.getApplicationContext());
+        Context context = InstrumentationRegistry.getTargetContext();
+        Realm.init(context);
         RealmConfiguration config = new RealmConfiguration.Builder()
-                .name("minsim_test.realm")
+                .name(String.format("minsim_test%s.realm", schemaVersion))
                 .schemaVersion(schemaVersion)
                 .inMemory()
                 .build();
