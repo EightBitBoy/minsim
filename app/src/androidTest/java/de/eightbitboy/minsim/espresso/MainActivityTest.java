@@ -3,6 +3,8 @@ package de.eightbitboy.minsim.espresso;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.squareup.spoon.Spoon;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,5 +27,6 @@ public class MainActivityTest {
     @Test
     public void navigationTest() {
         onView(withId(R.id.navigation)).check(matches(isDisplayed()));
+        Spoon.screenshot(mActivityRule.getActivity(), "MainActivity");
     }
 }

@@ -5,11 +5,13 @@ buildscript {
     }
     dependencies {
         classpath 'io.realm:realm-gradle-plugin:3.3.1'
+        classpath 'com.stanfy.spoon:spoon-gradle-plugin:1.2.2'
     }
 }
 
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
+apply plugin: 'spoon'
 
 android {
     compileSdkVersion 25
@@ -40,6 +42,11 @@ android {
     }
 }
 
+spoon {
+    debug = true
+    grantAllPermissions = true
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:25.3.1'
@@ -61,4 +68,5 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    androidTestCompile 'com.squareup.spoon:spoon-client:1.6.4'
 }
