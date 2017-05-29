@@ -67,4 +67,15 @@ class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.LevelItemVi
 		    contentTextView.setText("Level " + this.level.getNumber());
 	    }
     }
+
+    class LevelItemMiningViewHolder extends RecyclerView.ViewHolder {
+	    public final View view;
+	    private Level level;
+
+	    public LevelItemMiningViewHolder(View view) {
+		    super(view);
+		    ButterKnife.bind(this, view);
+		    this.view = view;
+	    }
+    }
 }
