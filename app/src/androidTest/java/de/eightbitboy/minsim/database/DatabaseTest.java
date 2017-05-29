@@ -12,6 +12,7 @@ import de.eightbitboy.minsim.activities.MainActivity;
 import de.eightbitboy.minsim.database.Database;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
+import io.realm.internal.RealmCore;
 
 import static org.junit.Assert.*;
 
@@ -19,45 +20,38 @@ import static org.junit.Assert.*;
 @Config(constants = BuildConfig.class)
 public class DatabaseTest {
 
-    private MainActivity activity;
-
-    @Before
-    public void setUp() {
-        activity = Robolectric.setupActivity(MainActivity.class);
-        Database.initialize(activity.getApplicationContext());
-    }
-
     //TODO Read about dynamic realms!
     //TODO Read about setting up the activity for the whole class!
     @Test
     public void initializeTest() {
-        /*
         MainActivity activity = Robolectric.setupActivity(MainActivity.class);
         Database.initialize(activity.getApplicationContext());
         assertNotNull(Database.getDb());
-        */
     }
 
     @Test
     public void schema0Test() {
-        Realm db = Realm.getInstance(buildConfig(0));
+        Realm db = getDb(0);
     }
 
     @Test
     public void schema1Test() {
-        Realm db = Realm.getInstance(buildConfig(1));
+        Realm db = getDb(1);
     }
 
     @Test
     public void schema2Test() {
-        Realm db = Realm.getInstance(buildConfig(2));
+        Realm db = getDb(2);
     }
 
-    private RealmConfiguration buildConfig(long schemaVersion) {
-        return new RealmConfiguration.Builder()
+    private Realm getDb(long schemaVersion) {
+        MainActivity activity = Robolectric.setupActivity(MainActivity.class);
+        Realm.init(activity.getApplicationContext());
+        RealmConfiguration config = new RealmConfiguration.Builder()
                 .name("minsim_test.realm")
                 .schemaVersion(schemaVersion)
                 .inMemory()
                 .build();
+        return Realm.getInstance(config);
     }
 }
