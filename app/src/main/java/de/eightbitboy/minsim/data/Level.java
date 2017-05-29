@@ -7,4 +7,9 @@ public class Level extends RealmObject {
     @PrimaryKey
     public long id;
     public int number;
+    public long health;
+
+    public boolean isMined() {
+        return health <= 0;
+    }
 }
