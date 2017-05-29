@@ -7,7 +7,6 @@ import android.support.test.runner.AndroidJUnit4;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import de.eightbitboy.minsim.activities.MainActivity;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
