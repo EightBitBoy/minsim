@@ -9,9 +9,7 @@ final public class Database {
 
     public static String DATABASE_NAME = "minsim.realm";
 
-    private static boolean initialized = false;
-
-    private Database(Context context) {
+    private Database() {
     }
 
     public static void initialize(Context context) {
@@ -21,14 +19,9 @@ final public class Database {
                 .schemaVersion(0)
                 .build();
         Realm.setDefaultConfiguration(config);
-        initialized = true;
     }
 
-    //TODO Initialization might be a code smell!
-    public static Realm getDb(Context context) {
-        if (!initialized) {
-            throw new IllegalStateException("The database has not been initialized!");
-        }
+    public static Realm getDb() {
         return Realm.getDefaultInstance();
     }
 }
