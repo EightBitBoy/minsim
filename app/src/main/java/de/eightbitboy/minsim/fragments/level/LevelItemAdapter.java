@@ -10,18 +10,16 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.eightbitboy.minsim.R;
 import de.eightbitboy.minsim.data.Level;
-import de.eightbitboy.minsim.data.LevelDao;
-import de.eightbitboy.minsim.database.Database;
-
-import java.util.List;
+import io.realm.Realm;
+import io.realm.RealmResults;
 
 class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.LevelItemViewHolder> {
 
-    private final List<Level> levels;
+    private final RealmResults<Level> levels;
 
     LevelItemAdapter() {
-	    LevelDao dao = Database.getSession().getLevelDao();
-	    levels = dao.loadAll();
+        //TODO use Database class!
+        levels = Realm.getDefaultInstance().where(Level.class).findAll();
     }
 
     @Override
@@ -33,12 +31,12 @@ class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.LevelItemVi
 
     @Override
     public void onBindViewHolder(final LevelItemViewHolder holder, int position) {
-		holder.setLevel(levels.get(position));
+        holder.setLevel(levels.get(position));
 
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-				//TODO Do something on click?
+                //TODO Do something on click?
             }
         });
     }
@@ -52,30 +50,32 @@ class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.LevelItemVi
         public final View view;
         private Level level;
 
-	    @BindView(R.id.level_item_number) TextView numberTextView;
-	    @BindView(R.id.level_item_content) TextView contentTextView;
+        @BindView(R.id.level_item_number)
+        TextView numberTextView;
+        @BindView(R.id.level_item_content)
+        TextView contentTextView;
 
-	    LevelItemViewHolder(View view) {
+        LevelItemViewHolder(View view) {
             super(view);
-	        ButterKnife.bind(this, view);
+            ButterKnife.bind(this, view);
             this.view = view;
         }
 
-	    public void setLevel(Level level) {
-		    this.level = level;
-		    numberTextView.setText("" + this.level.getNumber());
-		    contentTextView.setText("Level " + this.level.getNumber());
-	    }
+        void setLevel(Level level) {
+            this.level = level;
+            numberTextView.setText("" + this.level.number);
+            contentTextView.setText("Level " + this.level.number);
+        }
     }
 
     class LevelItemMiningViewHolder extends RecyclerView.ViewHolder {
-	    public final View view;
-	    private Level level;
+        public final View view;
+        private Level level;
 
-	    public LevelItemMiningViewHolder(View view) {
-		    super(view);
-		    ButterKnife.bind(this, view);
-		    this.view = view;
-	    }
+        public LevelItemMiningViewHolder(View view) {
+            super(view);
+            ButterKnife.bind(this, view);
+            this.view = view;
+        }
     }
 }
