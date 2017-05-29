@@ -28,14 +28,12 @@ public class DatabaseTest {
 
     @Test
     public void schema0Test() {
-        System.out.print("bar");
         Realm db = getDb(0);
     }
 
     @Test
     public void schema1Test() {
         Realm db = getDb(1);
-        Log.d("foo", "bar");
     }
 
     @Test

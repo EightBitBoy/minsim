@@ -27,6 +27,7 @@ final public class Database {
         migrate(config);
     }
 
+    //TODO https://github.com/realm/realm-java/blob/master/examples/migrationExample/src/main/java/io/realm/examples/realmmigrationexample/MigrationExampleActivity.java
     public static void migrate(RealmConfiguration config) {
         try {
             System.out.print("foo");
