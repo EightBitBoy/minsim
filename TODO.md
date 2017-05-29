@@ -29,6 +29,7 @@
 * search: sqlite database migration
 
 ### Testing
+* http://square.github.io/spoon/
 * Travis CI emulator
 * Spock
 * Espresso

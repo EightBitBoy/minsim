@@ -8,6 +8,7 @@ import de.eightbitboy.minsim.database.migrations.MigrationV0;
 import de.eightbitboy.minsim.database.migrations.MigrationV1;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
+import timber.log.Timber;
 
 final public class Database {
 
@@ -26,11 +27,13 @@ final public class Database {
         migrate(config);
     }
 
-    private static void migrate(RealmConfiguration config) {
+    public static void migrate(RealmConfiguration config) {
         try {
+            System.out.print("foo");
             Realm.migrateRealm(config, new MigrationV0());
             Realm.migrateRealm(config, new MigrationV1());
         } catch (FileNotFoundException e) {
+            Timber.d("The realm file does not exist!");
             e.printStackTrace();
         }
     }
