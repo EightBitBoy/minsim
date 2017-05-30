@@ -12,13 +12,12 @@ import org.junit.runner.RunWith;
 import de.eightbitboy.minsim.R;
 import de.eightbitboy.minsim.activities.MainActivity;
 
-import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTest {
+public class MainActivityTest extends EspressoTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityRule =
