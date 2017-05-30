@@ -8,6 +8,7 @@ import android.util.Log;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import de.eightbitboy.minsim.database.migrations.Seed;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import timber.log.Timber;
@@ -49,6 +50,7 @@ public class DatabaseTest {
                 .name(String.format("minsim_test%s.realm", schemaVersion))
                 .schemaVersion(schemaVersion)
                 .inMemory()
+                .initialData(new Seed())
                 .build();
         Database.migrate(config);
         return Realm.getInstance(config);

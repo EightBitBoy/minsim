@@ -10,6 +10,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.eightbitboy.minsim.R;
 import de.eightbitboy.minsim.data.Level;
+import de.eightbitboy.minsim.database.Database;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -19,7 +20,7 @@ class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.LevelItemVi
 
     LevelItemAdapter() {
         //TODO use Database class!
-        levels = Realm.getDefaultInstance().where(Level.class).findAll();
+        levels = Database.getDb().where(Level.class).findAll();
     }
 
     @Override
@@ -80,8 +81,8 @@ class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.LevelItemVi
 
         void setLevel(Level level) {
             this.level = level;
-            numberTextView.setText("" + this.level.number);
-            contentTextView.setText("Level " + this.level.number);
+            numberTextView.setText("" + this.level.getId());
+            contentTextView.setText("Level " + this.level.getId());
         }
     }
 

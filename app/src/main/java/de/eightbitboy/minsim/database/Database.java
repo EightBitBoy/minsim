@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 
 import de.eightbitboy.minsim.database.migrations.MigrationV0;
 import de.eightbitboy.minsim.database.migrations.MigrationV1;
+import de.eightbitboy.minsim.database.migrations.Seed;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import timber.log.Timber;
@@ -22,6 +23,7 @@ final public class Database {
         RealmConfiguration config = new RealmConfiguration.Builder()
                 .name(DATABASE_NAME)
                 .schemaVersion(0)
+                .initialData(new Seed())
                 .build();
         Realm.setDefaultConfiguration(config);
         migrate(config);
@@ -37,6 +39,10 @@ final public class Database {
             Timber.d("The realm file does not exist!");
             e.printStackTrace();
         }
+    }
+
+    public static void migrateToVersion(RealmConfiguration config, long version) {
+
     }
 
     public static Realm getDb() {
