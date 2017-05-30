@@ -44,6 +44,7 @@ android {
 
 spoon {
     debug = true
+    sequential = false
     grantAllPermissions = true
 }
 
