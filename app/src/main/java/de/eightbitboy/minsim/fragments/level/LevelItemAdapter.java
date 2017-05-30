@@ -24,8 +24,16 @@ class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.LevelItemVi
 
     @Override
     public LevelItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
+        View view;
+        // Level is already mined.
+        view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.fragment_level_item, parent, false);
+
+        // Level is being mined.
+        if (viewType == 0) {
+            view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.fragment_level_item_mining, parent, false);
+        }
         return new LevelItemViewHolder(view);
     }
 
@@ -39,6 +47,15 @@ class LevelItemAdapter extends RecyclerView.Adapter<LevelItemAdapter.LevelItemVi
                 //TODO Do something on click?
             }
         });
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (levels.get(position).isMined()) {
+            return 1; // Mined.
+        } else {
+            return 0; // Mining in progress.
+        }
     }
 
     @Override
