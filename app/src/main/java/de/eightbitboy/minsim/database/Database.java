@@ -4,7 +4,6 @@ import android.content.Context;
 
 import java.io.FileNotFoundException;
 
-import de.eightbitboy.minsim.database.migrations.MigrationV0;
 import de.eightbitboy.minsim.database.migrations.MigrationV1;
 import de.eightbitboy.minsim.database.migrations.Seed;
 import io.realm.Realm;
@@ -32,7 +31,6 @@ final public class Database {
     //TODO https://github.com/realm/realm-java/blob/master/examples/migrationExample/src/main/java/io/realm/examples/realmmigrationexample/MigrationExampleActivity.java
     public static void migrate(RealmConfiguration config) {
         try {
-            Realm.migrateRealm(config, new MigrationV0());
             Realm.migrateRealm(config, new MigrationV1());
         } catch (FileNotFoundException e) {
             Timber.d("The realm file does not exist, migrations will be skipped!");
