@@ -27,11 +27,18 @@ android {
     }
     buildTypes {
         debug {
-            applicationIdSuffix ".debug"
+            manifestPlaceholders = [
+                    appName: "Minsim Debug"]
             debuggable = true
+
+            applicationIdSuffix ".debug"
         }
         release {
-            minifyEnabled false
+            manifestPlaceholders = [
+                    appName: "Minsim"]
+            debuggable = false
+
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
