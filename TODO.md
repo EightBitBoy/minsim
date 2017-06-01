@@ -36,6 +36,7 @@
 * Espresso
 
 ### Other
+* https://github.com/kaushikgopal/RxJava-Android-Samples
 * Remember to do important stuff in fragments in onAttach and on Detach!
 * EventBus
 * http://androidannotations.org/
