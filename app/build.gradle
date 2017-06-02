@@ -25,6 +25,10 @@ android {
         versionName "0.1.0"
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
+        //TODO https://stackoverflow.com/questions/37004069/errorjack-is-required-to-support-java-8-language-features
+        jackOptions {
+            enabled true
+        }
     }
     buildTypes {
         debug {
@@ -51,6 +55,10 @@ android {
                 showStandardStreams = true
             }
         }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
     }
 }
 
