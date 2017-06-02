@@ -16,7 +16,6 @@
 * https://material.io/guidelines/patterns/navigation-drawer.html
 
 ### Database
-* Flway
 * http://kpgalligan.tumblr.com/post/133281929963/my-talk-at-droidcon-uk
 * GreenDAO
 * DBFlow
@@ -29,7 +28,7 @@
 * search: sqlite database migration
 
 ### Testing
-* http://square.github.io/spoon/
+* http://www.vogella.com/tutorials/AndroidTesting/article.html
 * https://github.com/shazam/fork
 * Travis CI emulator
 * Spock
