@@ -12,8 +12,6 @@ public class Game {
 
 	private Game() {
 		Realm db = Realm.getDefaultInstance();
-
-		Observable<Level> levelObservable = Observable.create(emitter -> {});
 	}
 
 	public static void initialize(Context context) {
