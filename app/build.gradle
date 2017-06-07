@@ -7,12 +7,14 @@ buildscript {
     dependencies {
         classpath 'io.realm:realm-gradle-plugin:3.3.1'
         classpath 'com.stanfy.spoon:spoon-gradle-plugin:1.2.2'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.15.0'
     }
 }
 
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 apply plugin: 'spoon'
+apply plugin: 'com.github.ben-manes.versions'
 
 android {
     compileSdkVersion 25
