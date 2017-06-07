@@ -20,14 +20,17 @@ public class Bus {
 	private Bus() {
 	}
 
-	public static Bus get() {
+	public static void initialize() {
 		if (INSTANCE == null) {
 			INSTANCE = new Bus();
 		}
-		return INSTANCE;
 	}
 
 	public static Disposable subscribe(@NonNull Consumer<Object> action) {
 		return INSTANCE.subject.subscribe(action);
+	}
+
+	public static void publish(@NonNull Object message) {
+		INSTANCE.subject.onNext(message);
 	}
 }
