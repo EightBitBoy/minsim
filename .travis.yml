@@ -31,4 +31,5 @@ script:
   - ./gradlew assemble
   - ./gradlew lint
   - ./gradlew test
+  - ./gradlew dependencyUpdates
   # TODO Run instrumented test on emulator!
