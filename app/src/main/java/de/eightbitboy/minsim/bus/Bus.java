@@ -1,5 +1,10 @@
 package de.eightbitboy.minsim.bus;
 
+import io.reactivex.annotations.NonNull;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.subjects.PublishSubject;
+
 //https://stackoverflow.com/questions/40636946/updating-fragment-from-activity-using-rxjava-android
 
 //https://lorentzos.com/rxjava-as-event-bus-the-right-way-10a36bdd49ba
@@ -8,15 +13,21 @@ package de.eightbitboy.minsim.bus;
 //https://github.com/futurice/android-best-practices/
 //https://github.com/mihaip/dex-method-counts
 public class Bus {
-    private static Bus INSTANCE;
+	private static Bus INSTANCE;
 
-    private Bus() {
-    }
+	private PublishSubject<Object> subject = PublishSubject.create();
 
-    public static Bus get() {
-        if (INSTANCE == null) {
-            INSTANCE = new Bus();
-        }
-        return INSTANCE;
-    }
+	private Bus() {
+	}
+
+	public static Bus get() {
+		if (INSTANCE == null) {
+			INSTANCE = new Bus();
+		}
+		return INSTANCE;
+	}
+
+	public static Disposable subscribe(@NonNull Consumer<Object> action) {
+		return INSTANCE.subject.subscribe(action);
+	}
 }
