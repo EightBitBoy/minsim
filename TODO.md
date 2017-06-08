@@ -28,6 +28,7 @@
 * search: sqlite database migration
 
 ### Testing
+* http://eng.localytics.com/best-practices-and-common-mistakes-with-travis-ci/
 * http://www.vogella.com/tutorials/AndroidTesting/article.html
 * https://github.com/shazam/fork
 * Travis CI emulator

@@ -27,9 +27,14 @@ install:
   - echo y | android update sdk -u -a -t extra-google-m2repository
   - echo y | android update sdk -u -a -t extra-android-m2repository
 
-script:
+before_script:
   - ./gradlew assemble
+
+script:
   - ./gradlew lint
   - ./gradlew test
   - ./gradlew dependencyUpdates
   # TODO Run instrumented test on emulator!
+
+matrix:
+  fast_finish: true
