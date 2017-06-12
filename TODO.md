@@ -36,6 +36,7 @@
 * Espresso
 
 ### Other
+* Fastlane
 * https://github.com/JakeWharton/RxRelay
 * https://docs.gradle.org/4.0-rc-1/release-notes.html
 * https://github.com/kaushikgopal/RxJava-Android-Samples
