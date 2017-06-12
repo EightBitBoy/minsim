@@ -18,6 +18,7 @@ public class TestingGround {
 	}
 
 	private static void test(Context context) {
+		// test 1
 		Observable<String> obervable = Observable.just("foo", "bar", "baz");
 		obervable.subscribe(new Consumer<String>() {
 			@Override
@@ -26,12 +27,17 @@ public class TestingGround {
 			}
 		});
 
-		
+		// test 2
 		Bus.subscribe(new Consumer<Object>() {
 			@Override
 			public void accept(@NonNull Object o) throws Exception {
-
+				Timber.d("Accepted: " + o.toString());
 			}
 		});
+
+		Bus.publish("object 1");
+		Bus.publish("object 2");
+
+		// test 3
 	}
 }
