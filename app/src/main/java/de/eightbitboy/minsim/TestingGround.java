@@ -28,6 +28,8 @@ public class TestingGround {
 		});
 
 		// test 2
+		Bus.initialize();
+
 		Bus.subscribe(new Consumer<Object>() {
 			@Override
 			public void accept(@NonNull Object o) throws Exception {
