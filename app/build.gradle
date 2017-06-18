@@ -8,8 +8,14 @@ buildscript {
         classpath 'io.realm:realm-gradle-plugin:3.3.2'
         classpath 'com.stanfy.spoon:spoon-gradle-plugin:1.2.2'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.15.0'
+        classpath 'com.atlassian.commonmark:commonmark:0.9.0'
     }
 }
+
+import org.commonmark.node.Node;
+import org.commonmark.parser.Parser;
+import org.commonmark.renderer.html.HtmlRenderer;
+
 
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
@@ -56,10 +62,33 @@ android {
     }
 }
 
+
 spoon {
     debug = true
     sequential = false
     grantAllPermissions = true
+}
+
+task processMarkdown {
+    File assets = new File('app/src/main/assets')
+    if( !assets.exists() ) {
+        assets.mkdirs()
+    }
+
+    Parser parser = Parser.builder().build()
+    HtmlRenderer renderer = HtmlRenderer.builder().build()
+
+    new File('app/src/main/assets/about.html').withWriter('UTF-8') { w ->
+        w.write(renderer.render(parser.parse(new File("README.md").text)))
+    }
+
+    new File('app/src/main/assets/changelog.html').withWriter('UTF-8') { w ->
+        w.write(renderer.render(parser.parse(new File("CHANGELOG.md").text)))
+    }
+}
+
+assemble {
+    dependsOn processMarkdown
 }
 
 dependencies {
