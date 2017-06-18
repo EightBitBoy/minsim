@@ -87,7 +87,7 @@ task processMarkdown {
     }
 }
 
-assemble {
+preBuild {
     dependsOn processMarkdown
 }
 
