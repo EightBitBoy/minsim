@@ -10,16 +10,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Minsim">
-
         <activity
             android:name=".activities.MainActivity"
             android:label="${appName}">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".activities.ChangelogActivity"
+            android:label="@string/title_activity_changelog"
+            android:theme="@style/Theme.Minsim" />
+
+        <activity
+            android:name=".activities.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/Theme.Minsim"></activity>
     </application>
 
 </manifest>

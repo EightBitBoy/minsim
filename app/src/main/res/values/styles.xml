@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- TODO Adjust this! -->
+    <style name="Theme.Minsim.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Minsim.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

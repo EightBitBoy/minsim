@@ -1,5 +1,6 @@
 package de.eightbitboy.minsim.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -66,5 +67,19 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.toolbar_about_item:
+                startActivity(new Intent(this, AboutActivity.class));
+                break;
+            case R.id.toolbar_changelog_item:
+                startActivity(new Intent(this, ChangelogActivity.class));
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
