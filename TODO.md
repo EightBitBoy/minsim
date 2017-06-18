@@ -3,6 +3,8 @@
 ## Features
 
 ## Development
+* https://developer.android.com/training/appbar/setting-up.html
+* https://android-developers.googleblog.com/2014/10/appcompat-v21-material-design-for-pre.html
 
 ### UI
 * viewPager for Fragment?
