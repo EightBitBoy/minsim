@@ -18,6 +18,9 @@
 * https://github.com/j-easy/easy-rules
 * https://glossar.hs-augsburg.de/Rule_Engine
 * http://danveloper.github.io/developing-a-rules-engine-in-groovy.html
+* https://www.androidexperiments.com/
+* https://play.google.com/store/apps/details?id=com.steppschuh.remotecontrolcollection
+* https://play.google.com/store/apps/details?id=com.Relmtech.Remote
 
 ### UI
 * viewPager for Fragment?
