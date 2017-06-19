@@ -10,17 +10,15 @@
 * Complex Event Processing
 * https://java-source.net/open-source/rule-engines
 * https://docs.jboss.org/drools/release/5.3.0.Final/drools-expert-docs/html/ch01.html
-* https://martinfowler.com/bliki/RulesEngine.html
 * https://github.com/camunda/camunda-bpm-platform
 * https://bazel.build/
 * Kotlin!!!
 * https://stackoverflow.com/questions/775170/when-should-you-not-use-a-rules-engine
 * https://github.com/j-easy/easy-rules
-* https://glossar.hs-augsburg.de/Rule_Engine
-* http://danveloper.github.io/developing-a-rules-engine-in-groovy.html
 * https://www.androidexperiments.com/
 * https://play.google.com/store/apps/details?id=com.steppschuh.remotecontrolcollection
 * https://play.google.com/store/apps/details?id=com.Relmtech.Remote
+* android layout include
 
 ### UI
 * viewPager for Fragment?
