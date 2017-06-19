@@ -5,6 +5,13 @@
 ## Development
 * https://developer.android.com/training/appbar/setting-up.html
 * https://android-developers.googleblog.com/2014/10/appcompat-v21-material-design-for-pre.html
+* http://www.easyrules.org/
+* https://github.com/kiegroup/drools
+* Complex Event Processing
+* https://java-source.net/open-source/rule-engines
+* https://docs.jboss.org/drools/release/5.3.0.Final/drools-expert-docs/html/ch01.html
+* https://martinfowler.com/bliki/RulesEngine.html
+* https://github.com/camunda/camunda-bpm-platform
 
 ### UI
 * viewPager for Fragment?
@@ -49,6 +56,7 @@
 * https://blog.codecentric.de/2017/01/must-libraries-fuer-android/
 * IcePick
 * Logging
+* Profiling
 * https://github.com/codepath/android_guides/wiki
 * https://medium.freecodecamp.com/25-new-android-libraries-which-you-definitely-want-to-try-at-the-beginning-of-2017-45878d5408c0
 
