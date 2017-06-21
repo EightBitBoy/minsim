@@ -21,6 +21,7 @@
 * android layout include
 
 ### UI
+* https://material.io/
 * viewPager for Fragment?
 * android.support.design
 * https://guides.codepath.com/android/Bottom-Navigation-Views
