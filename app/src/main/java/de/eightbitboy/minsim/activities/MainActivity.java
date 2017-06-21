@@ -73,10 +73,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.toolbar_about_item:
-                startActivity(new Intent(this, AboutActivity.class));
+	            startActivity(HtmlActivity.getStartIntent(this, "about.html"));
                 break;
             case R.id.toolbar_changelog_item:
-                startActivity(ChangelogActivity.getStartIntent(this, "changelog.html"));
+                startActivity(HtmlActivity.getStartIntent(this, "changelog.html"));
                 break;
         }
 

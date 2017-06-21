@@ -20,15 +20,12 @@
             </intent-filter>
         </activity>
 
+        <!--TODO Fix the label, make it dynamic!-->
         <activity
-            android:name=".activities.ChangelogActivity"
+            android:name=".activities.HtmlActivity"
             android:label="@string/title_activity_changelog"
             android:theme="@style/Theme.Minsim" />
 
-        <activity
-            android:name=".activities.AboutActivity"
-            android:label="@string/title_activity_about"
-            android:theme="@style/Theme.Minsim"></activity>
     </application>
 
 </manifest>
