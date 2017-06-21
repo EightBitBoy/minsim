@@ -1,5 +1,7 @@
 package de.eightbitboy.minsim.activities;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,6 +21,14 @@ import de.eightbitboy.minsim.R;
 
 public class ChangelogActivity extends AppCompatActivity {
 
+	private static final String EXTRA_HTML_FILE_NAME = "EXTRA_HTML_FILE_NAME";
+
+	public static Intent getStartIntent(Context context, String htmlFileName){
+		Intent intent = new Intent(context, ChangelogActivity.class);
+		intent.putExtra(EXTRA_HTML_FILE_NAME, htmlFileName);
+		return intent;
+	}
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +38,7 @@ public class ChangelogActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         HtmlTextView htmlTextView = (HtmlTextView) findViewById(R.id.changelog_html);
-        htmlTextView.setHtml(readFromFile("changelog.html"));
+        htmlTextView.setHtml(readFromFile(getIntent().getStringExtra(EXTRA_HTML_FILE_NAME)));
     }
 
     private String readFromFile(String fileName) {

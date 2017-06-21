@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, AboutActivity.class));
                 break;
             case R.id.toolbar_changelog_item:
-                startActivity(new Intent(this, ChangelogActivity.class));
+                startActivity(ChangelogActivity.getStartIntent(this, "changelog.html"));
                 break;
         }
 
