@@ -74,22 +74,25 @@ spoon {
 }
 
 task decryptFiles {
+    /*
     String key = project.property('encryptionKey')
     if (!key) {
         println 'Skipping decryption because the key does not exist!'
         return
     }
 
-    byte[] encrypted = new File('encrypted.txt').readBytes()
+    byte[] encrypted = new File('app/google-services.json').readBytes()
     Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
     SecretKeySpec keySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
     IvParameterSpec iv = new IvParameterSpec(keySpec.getEncoded());
     cipher.init(Cipher.DECRYPT_MODE, keySpec, iv);
     byte[] decrypted = cipher.doFinal(encrypted)
     println(new String(decrypted))
+    */
 }
 
 task encryptFiles {
+    /*
     String key = project.property('encryptionKey')
     String text = "Hello world!"
     if (!key) {
@@ -102,9 +105,10 @@ task encryptFiles {
     IvParameterSpec iv = new IvParameterSpec(keySpec.getEncoded());
     cipher.init(Cipher.ENCRYPT_MODE, keySpec, iv);
     byte[] encrypted = cipher.doFinal(text.getBytes())
-    new File('encrypted.txt').withOutputStream { out ->
+    new File('app/google-services.json.encrypted').withOutputStream { out ->
         out.write(encrypted)
     }
+    */
 }
 
 task processMarkdown {
@@ -126,7 +130,7 @@ task processMarkdown {
 }
 
 preBuild {
-    dependsOn processMarkdown, decryptFiles
+    dependsOn processMarkdown//, decryptFiles
 }
 
 dependencies {
