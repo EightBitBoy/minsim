@@ -3,6 +3,7 @@
 ## Features
 
 ## Development
+* https://stackoverflow.com/questions/31425566/gradle-script-for-aes-encryption
 * https://developer.android.com/training/appbar/setting-up.html
 * https://android-developers.googleblog.com/2014/10/appcompat-v21-material-design-for-pre.html
 * http://www.easyrules.org/
