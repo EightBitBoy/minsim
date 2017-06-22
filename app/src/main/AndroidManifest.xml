@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="de.eightbitboy.minsim">
+          package="de.eightbitboy.minsim">
 
     <application
         android:name=".Minsim"
@@ -14,9 +14,9 @@
             android:name=".activities.MainActivity"
             android:label="${appName}">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
@@ -24,8 +24,12 @@
         <activity
             android:name=".activities.HtmlActivity"
             android:label="@string/title_activity_changelog"
-            android:theme="@style/Theme.Minsim" />
+            android:theme="@style/Theme.Minsim"/>
 
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="<fabric_api_key>"/>
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

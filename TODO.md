@@ -20,6 +20,7 @@
 * https://play.google.com/store/apps/details?id=com.steppschuh.remotecontrolcollection
 * https://play.google.com/store/apps/details?id=com.Relmtech.Remote
 * android layout include
+* https://developers.google.com/android-publisher/libraries
 
 ### UI
 * https://material.io/
