@@ -26,11 +26,8 @@
             android:label="@string/title_activity_changelog"
             android:theme="@style/Theme.Minsim"/>
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="fabric_api_key"/>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+
 </manifest>
 

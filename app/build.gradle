@@ -10,7 +10,6 @@ buildscript {
         classpath 'com.stanfy.spoon:spoon-gradle-plugin:1.2.2'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.15.0'
         classpath 'com.atlassian.commonmark:commonmark:0.9.0'
-        classpath 'io.fabric.tools:gradle:1.+'
     }
 }
 
@@ -23,11 +22,6 @@ import javax.crypto.spec.SecretKeySpec;
 
 
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
-
-repositories {
-    maven { url 'https://maven.fabric.io/public' }
-}
 
 apply plugin: 'realm-android'
 apply plugin: 'spoon'
@@ -138,14 +132,9 @@ preBuild {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-
-
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
-        transitive = true;
-    }
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
