@@ -137,6 +137,15 @@ preBuild {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
+
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
@@ -147,17 +156,11 @@ dependencies {
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile 'io.reactivex.rxjava2:rxjava:2.1.0'
     compile 'org.sufficientlysecure:html-textview:3.4'
-
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
-
+    compile 'com.google.firebase:firebase-crash:10.0.1'
     testCompile 'junit:junit:4.12'
     testCompile 'org.robolectric:robolectric:3.3.2'
-
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
     androidTestCompile 'com.squareup.spoon:spoon-client:1.7.1'
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
-        transitive = true;
-    }
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 }
+
+apply plugin: 'com.google.gms.google-services'
