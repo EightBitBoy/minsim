@@ -89,9 +89,9 @@ task encryptFiles {
     }
 
     Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
-    //IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
     SecretKeySpec keySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
-    cipher.init(Cipher.ENCRYPT_MODE, keySpec);
+    IvParameterSpec iv = new IvParameterSpec(keySpec.getEncoded());
+    cipher.init(Cipher.ENCRYPT_MODE, keySpec, iv);
     byte[] encrypted = cipher.doFinal(text.getBytes())
     println(new String(encrypted, "UTF-8"))
 }
