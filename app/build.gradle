@@ -71,7 +71,7 @@ spoon {
 }
 
 grafie {
-    password = findProperty('grafie.password')
+    password = hasProperty('grafie.password') ? property('grafie.password') : System.getenv('GRAFIE_PASSWORD')
 }
 
 task processMarkdown {
