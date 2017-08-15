@@ -70,8 +70,11 @@ spoon {
     grantAllPermissions = true
 }
 
+def grafiePassword = hasProperty('grafiepassword') ?
+        property('grafiepassword') : System.getenv('GRAFIE_PASSWORD')
+
 grafie {
-    password = hasProperty('grafie.password') ? property('grafie.password') : System.getenv('GRAFIE_PASSWORD')
+    password = grafiePassword
 }
 
 task processMarkdown {
