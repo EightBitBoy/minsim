@@ -70,6 +70,10 @@ spoon {
     grantAllPermissions = true
 }
 
+grafie {
+    password = findProperty('grafie.password')
+}
+
 task processMarkdown {
     File assets = new File('app/src/main/assets')
     if (!assets.exists()) {
