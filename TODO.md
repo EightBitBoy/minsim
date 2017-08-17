@@ -26,6 +26,7 @@
 * https://play.google.com/store/apps/details?id=com.Relmtech.Remote
 * android layout include
 * https://developers.google.com/android-publisher/libraries
+* https://developer.android.com/topic/libraries/architecture/index.html
 
 ### UI
 * https://material.io/
@@ -40,10 +41,12 @@
 * https://material.io/guidelines/patterns/navigation-drawer.html
 
 ### Database
+* https://developer.android.com/topic/libraries/architecture/room.html
 * Requery
-* http://kpgalligan.tumblr.com/post/133281929963/my-talk-at-droidcon-uk
 * GreenDAO
 * DBFlow
+* https://github.com/greenrobot/ObjectBox
+* http://kpgalligan.tumblr.com/post/133281929963/my-talk-at-droidcon-uk
 * Use a DataProvider?
 * http://www.vogella.com/tutorials/AndroidSQLite/article.html
 * TODO handle migrations
