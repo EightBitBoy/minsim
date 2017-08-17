@@ -40,6 +40,7 @@
 * https://material.io/guidelines/patterns/navigation-drawer.html
 
 ### Database
+* Requery
 * http://kpgalligan.tumblr.com/post/133281929963/my-talk-at-droidcon-uk
 * GreenDAO
 * DBFlow
