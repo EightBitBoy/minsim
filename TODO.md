@@ -41,6 +41,7 @@
 * https://material.io/guidelines/patterns/navigation-drawer.html
 
 ### Database
+* https://developer.android.com/topic/libraries/architecture/index.html
 * https://developer.android.com/topic/libraries/architecture/room.html
 * Requery
 * GreenDAO
