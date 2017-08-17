@@ -3,12 +3,11 @@
 ## Features
 
 ## Development
-<<<<<<< HEAD
+* https://developer.android.com/topic/libraries/support-library/setup.html#add-library
+* https://android-developers.googleblog.com/2017/07/android-testing-support-library-10-is.html
 * https://stackoverflow.com/questions/31425566/gradle-script-for-aes-encryption
-=======
 * https://stackoverflow.com/questions/36964276/is-google-services-json-confidential
 * https://github.com/StackExchange/blackbox
->>>>>>> Update the todo
 * https://developer.android.com/training/appbar/setting-up.html
 * https://android-developers.googleblog.com/2014/10/appcompat-v21-material-design-for-pre.html
 * http://www.easyrules.org/
@@ -43,6 +42,7 @@
 ### Database
 * https://developer.android.com/topic/libraries/architecture/index.html
 * https://developer.android.com/topic/libraries/architecture/room.html
+* https://medium.com/google-developers/testing-room-migrations-be93cdb0d975
 * Requery
 * GreenDAO
 * DBFlow
