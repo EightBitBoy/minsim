@@ -6,6 +6,7 @@ buildscript {
         maven { url 'https://maven.fabric.io/public' }
         maven { url 'https://plugins.gradle.org/m2/' }
         maven { url 'https://maven.google.com' }
+        maven { url 'https://jitpack.io' }
     }
     dependencies {
         classpath 'io.realm:realm-gradle-plugin:3.5.0'
@@ -122,6 +123,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'org.robolectric:robolectric:3.4.2'
     testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
+    //testCompile 'com.github.hkhc:electricspock:0.5.0.1'
     androidTestCompile 'com.squareup.spoon:spoon-client:1.7.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }
