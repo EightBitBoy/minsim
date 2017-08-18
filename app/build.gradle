@@ -118,6 +118,7 @@ dependencies {
     compile 'com.google.firebase:firebase-crash:11.0.4'
     testCompile 'junit:junit:4.12'
     testCompile 'org.robolectric:robolectric:3.4.2'
+    testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
     androidTestCompile 'com.squareup.spoon:spoon-client:1.7.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }
