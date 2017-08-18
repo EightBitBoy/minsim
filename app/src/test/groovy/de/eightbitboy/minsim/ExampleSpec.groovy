@@ -1,3 +1,5 @@
+package de.eightbitboy.minsim
+
 import spock.lang.Specification
 
 public class ExampleSpec extends Specification{
