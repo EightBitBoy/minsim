@@ -7,7 +7,7 @@ import org.robolectric.annotation.Config
 import de.eightbitboy.minsim.BuildConfig
 import de.eightbitboy.minsim.activities.MainActivity
 
-@Config(constants = BuildConfig.class)
+@Config(constants = BuildConfig.class, manifest='src/debug/AndroidManifest.xml')
 public class MainActivitySpec extends ElectricSpecification{
 
     def "the navigation is available"(){
