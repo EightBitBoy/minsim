@@ -2,9 +2,9 @@ package de.eightbitboy.minsim
 
 import spock.lang.Specification
 
-public class ExampleSpec extends Specification{
+class ExampleSpec extends Specification {
 
-    def "add values"(){
+    def "add values"() {
         setup:
         int valueA = 5
         int valueB = 8
