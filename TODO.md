@@ -3,6 +3,10 @@
 ## Features
 
 ## Development
+* AndroidX, https://developer.android.com/jetpack/androidx/#new-project
+* android.useAndroidX=true, android.enableJetifier=true in gradle.properties
+* https://developer.android.com/training/testing/set-up-project
+* https://developer.android.com/jetpack/androidx/#new-project
 * Android Jetpack
 * Android App Bundles: https://d.android.com/r/studio-wna/aab-overview.html
 * https://android-developers.googleblog.com/2017/05/android-studio-3-0-canary1.html
