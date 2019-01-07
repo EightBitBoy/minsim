@@ -1,0 +1,40 @@
+language: android
+
+jdk:
+  - oraclejdk8
+
+android:
+  components:
+#    - tools
+#    - platform-tools
+#    - build-tools-25.0.3
+#    - android-25
+#    - extra-google-m2repository
+#    - extra-android-m2repository
+#    - extra-google-google_play_services
+  licenses:
+    - 'android-sdk-.+'
+    - 'google-gdk-.+'
+
+before_install:
+  - chmod +x gradlew
+
+install:
+  - echo y | android update sdk -u -a -t tools
+  - echo y | android update sdk -u -a -t platform-tools
+  - echo y | android update sdk -u -a -t build-tools-27.0.3
+  - echo y | android update sdk -u -a -t android-27
+  - echo y | android update sdk -u -a -t extra-google-m2repository
+  - echo y | android update sdk -u -a -t extra-android-m2repository
+
+before_script:
+  - ./gradlew assemble
+
+script:
+  - ./gradlew lint
+  - ./gradlew test
+  - ./gradlew dependencyUpdates
+  # TODO Run instrumented test on emulator!
+
+matrix:
+  fast_finish: true
