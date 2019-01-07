@@ -30,10 +30,15 @@ dependencies {
 	testImplementation 'junit:junit:4.12'
 	androidTestImplementation 'com.android.support.test:runner:1.0.2'
 	androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+	androidTestImplementation 'com.android.support:support-annotations:28.0.0' //TODO Need this?
 
 	annotationProcessor "androidx.room:room-compiler:$roomVersion"
 	implementation "androidx.room:room-runtime:$roomVersion"
 	implementation "androidx.room:room-rxjava2:$roomVersion"
 	implementation "androidx.room:room-coroutines:$roomVersion"
 	testImplementation "androidx.room:room-testing:$roomVersion"
+
+	androidTestImplementation 'androidx.test:core:1.1.0'
+	androidTestImplementation 'androidx.test:runner:1.1.1'
+	androidTestImplementation 'androidx.test:rules:1.1.1'
 }
