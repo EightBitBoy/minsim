@@ -3,6 +3,11 @@ language: android
 jdk:
   - oraclejdk8
 
+cache:
+  directories:
+    - $HOME/android-sdk-dl
+    - $HOME/android-sdk
+
 android:
   components:
 #    - tools
