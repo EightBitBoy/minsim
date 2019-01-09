@@ -9,7 +9,7 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.runner.AndroidJUnit4
 
 @RunWith(AndroidJUnit4::class)
-class SimpleEntityReadWriteTest {
+class DbTest {
 	private lateinit var mineDao: MineDao
 	private lateinit var db: Db
 
