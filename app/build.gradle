@@ -1,6 +1,17 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.github.ben-manes.versions'
+
+buildscript {
+	repositories {
+		jcenter()
+	}
+	
+	dependencies {
+		classpath 'com.github.ben-manes:gradle-versions-plugin:0.20.0'
+	}
+}
 
 android {
 	compileSdkVersion 28
