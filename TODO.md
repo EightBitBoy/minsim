@@ -4,6 +4,7 @@
 
 ## Development
 * AndroidX, https://developer.android.com/jetpack/androidx/#new-project
+* http://d.android.com/tools/testing
 * https://developer.android.com/jetpack/androidx/migrate
 * android.useAndroidX=true, android.enableJetifier=true in gradle.properties
 * https://developer.android.com/training/testing/set-up-project
