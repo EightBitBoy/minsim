@@ -13,6 +13,7 @@
 * Android App Bundles: https://d.android.com/r/studio-wna/aab-overview.html
 * https://android-developers.googleblog.com/2017/05/android-studio-3-0-canary1.html
 * https://developer.android.com/guide/slices/
+* https://proandroiddev.com/writing-integration-tests-in-android-b0436978ed7b
 * https://developer.android.com/topic/libraries/support-library/setup.html#add-library
 * https://android-developers.googleblog.com/2017/07/android-testing-support-library-10-is.html
 * https://stackoverflow.com/questions/31425566/gradle-script-for-aes-encryption
