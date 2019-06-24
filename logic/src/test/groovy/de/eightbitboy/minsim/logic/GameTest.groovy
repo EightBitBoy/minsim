@@ -7,4 +7,9 @@ class GameTest extends Specification {
         expect:
         ["a", "b"].contains("a")
     }
+
+    def "bar"() {
+        expect:
+        assert 3 + 5 == 9
+    }
 }

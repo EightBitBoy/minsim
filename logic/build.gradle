@@ -5,8 +5,13 @@ apply plugin: 'groovy'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    testCompile "org.codehaus.groovy:groovy-all:2.5.0"
     testCompile "org.spockframework:spock-core:1.3-groovy-2.5"
+}
+
+test {
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+    }
 }
 
 sourceCompatibility = "7"
