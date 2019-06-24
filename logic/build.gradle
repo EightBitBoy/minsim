@@ -14,6 +14,13 @@ test {
     }
 }
 
+//Show full spock output in console.
+tasks.withType(Test) {
+    testLogging {
+        exceptionFormat "full"
+    }
+}
+
 sourceCompatibility = "7"
 targetCompatibility = "7"
 buildscript {

@@ -1,3 +1,6 @@
 package de.eightbitboy.minsim.logic
 
-class Game
+class Game {
+    fun tick() {
+    }
+}
